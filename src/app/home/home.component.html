@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  </head>
+  <body>
+  
+    <app-search></app-search>
+    <app-tags></app-tags>
+      <div class="container-fluid">
+      
+        
+        <div class="row justify-content-center mt-5">
+
+          <ng-container *ngFor="let food of foods">
+            
+            <div class="card mt-1 m-2" style="width: 20rem;">
+                <a href="#"  routerLink="/food/{{food.id}}"><img src="{{food.imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <span class="name">{{food.name}}</span><br>
+                  
+                  <span class="fav"*ngIf="food.favourite else jjj"><i style="color:red;" class="bi bi-heart-fill"></i></span>
+                  <ng-template #jjj><label class="fav"><i class="bi bi-heart"></i></label></ng-template>
+                  
+                  <span class="star"><star-rating [value]="food.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="18px" [readonly]="true"></star-rating></span>
+                 
+                  <span *ngFor="let origin of food.origins">
+                    {{origin}}
+                  </span>
+                  
+                  <span class="time">🕑{{food.cookTime}}</span><br>
+                  
+                  <label class="mt-3 price">{{food.price | currency: 'INR'}}</label>
+
+                                
+                </div>
+              </div>
+            </ng-container>
+
+        </div>
+      
+    </div>
+ 
+   <h1 *ngIf="sss" class="error">{{sss}} is not Available<br>Please search another FOOD</h1>
+    
+  </body>
+</html>
+
+
+
+
+
+            
+              
+          
+
+              <!-- <div class="card mt-3 col-sm-6" style="width: 20rem;">
+                <a href="#"><img src="{{foods[1].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[2].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[3].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+
+           
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[4].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[5].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[6].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+
+              <div class="card mt-3" style="width: 20rem;">
+                <a href="#"><img src="{{foods[7].imageUrl}}" class="card-img-top" alt="..."></a>
+                <div class="card-body">
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div> -->

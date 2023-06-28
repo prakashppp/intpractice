@@ -1,0 +1,74 @@
+
+.logoo{
+    text-align: left;
+}
+
+.cartt{
+    text-align: end;
+}
+
+a{
+    text-decoration: none;
+    color:red;
+}
+
+.logo{
+    padding:0;
+    display:inline-block;
+    font-weight:bold;
+}
+
+.logo:hover{
+    background-color: red;
+    color:white;
+}
+
+.cart{
+    padding:0;
+    display:inline-block;
+    font-weight:bold;
+}
+
+.cart:hover{
+    background-color: red;
+    color:white;
+}
+
+hr{
+    border:3px solid red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container{
+    margin:0 auto;
+    display:flex;
+    justify-content: space-between;
+} */
+
+/* a.logo{
+    padding: 1em;
+    font-weight:bold ;
+}
+
+nav ul{
+    list-style-type:none;
+    margin: 0;
+}
+
+nav ul li a{
+    padding:1em;
+    display: inline-block;
+    font-weight: bold;
+} */

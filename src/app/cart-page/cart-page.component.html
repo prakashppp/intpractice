@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<app-notfound [visible]="cart.items.length <=0"></app-notfound>
+<div *ngIf="cart.items.length >0" class="container-fluid mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-12 col-lg-7">
+            <table class="table">
+
+                <tbody>
+                    <tr *ngFor="let cartitem of cart.items">
+                        <td><img [src]="cartitem.food.imageUrl" alt=""></td>
+                        <td><a routerLink="/food/{{cartitem.food.id}}">
+                                {{cartitem.food.name}}
+                            </a></td>
+                        <td><select #qs (change)="changeQuantity(cartitem.food.id,qs.value)">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select></td>
+                        <td>{{cartitem.getPrice()}}</td>
+                        <td><button class="remove btn btn-secondary" (click)="removeFromCart(cartitem)">
+                                Remove
+                            </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-8 col-9 col-lg-3">
+            <div class="checkout">
+
+                <span class="product">{{cart.items.length}}</span><br><br>
+                <span class="bill"><b>&#8377;</b>{{cart.totalPrice()}}</span>
+
+            </div>
+        </div>
+    </div>
+    <a routerLink="/pay" class="check">Proceed to Payment</a>
+    <!-- <button (click)="send()">sendd</button>
+    {{sss}} -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="con">
+    <ul list-group>
+        <li *ngFor="let cartitem of cart.items">
+            
+                <img [src]="cartitem.food.imageUrl" alt="">
+            
+
+            <div>
+                <a routerLink="/food/{{cartitem.food.id}}">
+                    {{cartitem.food.name}}
+                </a>
+            </div>
+
+            <div>
+                <select #qs (change)="changeQuantity(cartitem.food.id,qs.value)">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <div>
+                {{cartitem.food.price}}
+            </div>
+
+            <div>
+                <button class="remove" (click)="removeFromCart(cartitem)">
+                    Remove
+                </button>
+            </div>
+
+
+        </li>
+    </ul>
+</div> -->
+
+
+<!-- <ul class="list-group list-group-horizontal" *ngFor="let cartitem of cart.items">
+    <li class="list-group-item" >
+        <img [src]="cartitem.food.imageUrl" alt="">
+        <a routerLink="/food/{{cartitem.food.id}}">
+            {{cartitem.food.name}}
+        </a>
+        <select #qs (change)="changeQuantity(cartitem.food.id,qs.value)">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        {{cartitem.food.price}}
+        <button class="remove" (click)="removeFromCart(cartitem)">
+            Remove
+        </button>
+    </li>
+  </ul> -->
