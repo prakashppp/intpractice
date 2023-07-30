@@ -1,0 +1,117 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Grand Hayat",
+      "address": "Pune",
+      "email": "Hayat@gmail.com",
+      "services": "Indian",
+      "mobile": 9090909090
+    },
+    {
+      "id": 3,
+      "name": "Le Meridian",
+      "address": "Pune Mumbai highway",
+      "email": "Meridian@gmail.com",
+      "services": "Chinese",
+      "mobile": 9999999999
+    },
+    {
+      "id": 4,
+      "name": "Shereton Grand",
+      "address": "Koregaon park",
+      "email": "GrandInfo@gmail.com",
+      "services": "contenental",
+      "mobile": 7387608861
+    },
+    {
+      "id": 6,
+      "name": "Sweet Home",
+      "address": "Nagar-Pune Road, 414006",
+      "email": "sweethome980@gmail.com",
+      "services": "Veg and Non-Veg",
+      "mobile": 7517944028
+    },
+    {
+      "id": 7,
+      "name": "Nagri Village",
+      "address": "Nagar-Manmad Road",
+      "email": "nagri123@gmail.com",
+      "services": "Pure-Veg",
+      "mobile": 9359585185
+    }
+  ],
+  "signup": [
+    {
+      "name": "Taj",
+      "email": "TajManagement@gmail.com",
+      "mobile": 999999999,
+      "password": "password@123",
+      "id": 1
+    },
+    {
+      "name": "Admin",
+      "email": "Marvellous@gmail.com",
+      "mobile": 3164631649,
+      "password": "Admin@123",
+      "id": 2
+    },
+    {
+      "name": "prakash",
+      "email": "prakashjagtap738760@gmail.com",
+      "mobile": 7387608861,
+      "password": "Prakash@7",
+      "id": 3
+    },
+    {
+      "name": "punam",
+      "email": "punamV",
+      "mobile": 9359585184,
+      "password": "Punam",
+      "id": 4
+    },
+    {
+      "name": "Punam@",
+      "email": "Punam VV",
+      "mobile": 9359585184,
+      "password": "Punammm",
+      "id": 5
+    },
+    {
+      "name": "prakash",
+      "email": "prakash@gmail.com",
+      "mobile": 7387608861,
+      "password": "prakash",
+      "cpassword": "prakash",
+      "id": 6
+    },
+    {
+      "name": "prakash",
+      "email": "prakash@gmail.com",
+      "mobile": 9359585184,
+      "password": "punam",
+      "cpassword": "punam",
+      "id": 7
+    },
+    {
+      "name": "hshxs",
+      "email": "punam",
+      "mobile": 87987,
+      "password": "prakash",
+      "cpassword": "prakash",
+      "id": 8
+    },
+    {
+      "name": "Punam Varpe",
+      "email": "punam3@gmail.com",
+      "mobile": 9359585184,
+      "password": "punam",
+      "cpassword": "punam",
+      "id": 9
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

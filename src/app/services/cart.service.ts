@@ -2,15 +2,14 @@ import { Injectable } from '@angular/core';
 import { Cart } from '../shared/models/cart';
 import { foods } from '../shared/models/food';
 import { CartItem } from '../shared/models/cartItem';
-import { TransferService } from '../transfer.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private cart:Cart=new Cart();
-  cartlength:any;
 
+  private cart:Cart=new Cart();
+  
   
   addToCart(food:foods):void{
     let cartItem = this.cart.items.find(item=> item.food.id=== food.id)

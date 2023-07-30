@@ -14,9 +14,10 @@ export class CartPageComponent{
     
           
     constructor(private cs:CartService,public t:TransferService){
-        this.setCart();
+      this.setCart();
         this.t.setCount(this.cart.items.length);
         this.t.getPrice(this.cart.totalPrice());
+        
     }
 
     setCart(){

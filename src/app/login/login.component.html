@@ -1,0 +1,31 @@
+
+<div class="container">
+    <div class="row justify-content-center" >
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>PP FoodCenter Login Portal</h1>
+                    <h5>You can login here!</h5>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="logInn()"> 
+                    <div class="mb-3">
+                      <label class="form-label">Email address</label>
+                      <input [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter Email" autocomplete="off">
+                      <span [class.d-none]="loginForm.get('email')?.valid || loginForm.get('email')?.untouched">Enter Valid Email</span>
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input  [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" formControlName="password"  type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter Password">
+                      <span [class.d-none]="loginForm.get('password')?.valid || loginForm.get('password')?.untouched">Enter Valid Password</span>
+
+                    </div>
+                    <br>
+                    <button type="submit" class="btn">Login</button>
+                  </form>
+                  <a style="color: blue; margin-top: 10px;" routerLink="/signup">New User? Click to Sign up</a>
+
+            </div>
+        </div>
+    </div>
+</div>

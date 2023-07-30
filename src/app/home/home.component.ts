@@ -11,30 +11,33 @@ import { foods } from '../shared/models/food';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private fs:FoodService, private router:ActivatedRoute){}
+  constructor(private fs: FoodService, private router: ActivatedRoute) { }
 
 
-  foods:foods[]=[];
-  sss:string="";
-   
-  ngOnInit(){
-   
+  foods: foods[] = [];
+  sss: string = "";
 
-    this.router.params.subscribe(params=>{
-      if(params['searchItem']){
+  ngOnInit() {
 
-      this.foods=this.fs.getAll().filter(food=>food.name.toLowerCase().includes(params['searchItem'].toLowerCase()));
-      if(this.foods.length==0)
-      this.sss=""+params['searchItem'];
-      else
-      this.sss="";
+
+    this.router.params.subscribe(params => {
+      if (params['searchItem']) {
+
+        this.foods = this.fs.getAll().filter(food => food.name.toLowerCase().includes(params['searchItem'].toLowerCase()));
+        if (this.foods.length == 0)
+          this.sss = "" + params['searchItem'];
+        else
+          this.sss = "";
       }
 
-      else if(params['tag'])
-      this.foods=this.fs.getAllFoodByTag(params['tag']);
-      
+      else if (params['tag'] == 'All')
+        this.foods = this.fs.getAll()
+      else if (params['tag'])
+        this.foods = this.fs.getAll().filter(food => food.tags?.includes(params['tag']))
+        //this.foods=this.fs.getAllFoodByTag(params['tag']);
+
       else
-      this.foods=this.fs.getAll();
+        this.foods = this.fs.getAll();
     })
 
   }

@@ -1,3 +1,4 @@
+<app-header></app-header>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,8 +20,8 @@
 
           <ng-container *ngFor="let food of foods">
             
-            <div class="card mt-1 m-2" style="width: 20rem;">
-                <a href="#"  routerLink="/food/{{food.id}}"><img src="{{food.imageUrl}}" class="card-img-top" alt="..."></a>
+            <div class="card mt-1 m-2" routerLink="/food/{{food.id}}" style="width: 20rem;">
+                <a href="#" routerLink="/food/{{food.id}}"><img src="{{food.imageUrl}}" class="card-img-top" alt="..."></a>
                 <div class="card-body">
                   <span class="name">{{food.name}}</span><br>
                   

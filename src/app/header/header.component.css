@@ -1,6 +1,7 @@
 
 .logoo{
-    text-align: left;
+    /* text-align: left; */
+    font-weight: 900;
 }
 
 .cartt{
@@ -16,6 +17,7 @@ a{
     padding:0;
     display:inline-block;
     font-weight:bold;
+    font-size: 30px;
 }
 
 .logo:hover{
@@ -38,6 +40,17 @@ hr{
     border:3px solid red;
 }
 
+
+@media only screen and (max-width:500px){
+    .logo{
+        font-size: 22px;
+    }
+    .pannel{
+        font-size: 20px;
+        color:black;
+        text-align: end;
+    }
+}
 
 
 
