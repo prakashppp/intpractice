@@ -63,20 +63,7 @@
       "password": "Prakash@7",
       "id": 3
     },
-    {
-      "name": "punam",
-      "email": "punamV",
-      "mobile": 9359585184,
-      "password": "Punam",
-      "id": 4
-    },
-    {
-      "name": "Punam@",
-      "email": "Punam VV",
-      "mobile": 9359585184,
-      "password": "Punammm",
-      "id": 5
-    },
+    
     {
       "name": "prakash",
       "email": "prakash@gmail.com",
@@ -89,26 +76,11 @@
       "name": "prakash",
       "email": "prakash@gmail.com",
       "mobile": 9359585184,
-      "password": "punam",
-      "cpassword": "punam",
+      "password": "p",
+      "cpassword": "p",
       "id": 7
-    },
-    {
-      "name": "hshxs",
-      "email": "punam",
-      "mobile": 87987,
-      "password": "prakash",
-      "cpassword": "prakash",
-      "id": 8
-    },
-    {
-      "name": "Punam Varpe",
-      "email": "punam3@gmail.com",
-      "mobile": 9359585184,
-      "password": "punam",
-      "cpassword": "punam",
-      "id": 9
     }
+    
   ],
   "comments": [],
   "profile": {

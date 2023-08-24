@@ -28,7 +28,7 @@
                   <span class="fav"*ngIf="food.favourite else jjj"><i style="color:red;" class="bi bi-heart-fill"></i></span>
                   <ng-template #jjj><label class="fav"><i class="bi bi-heart"></i></label></ng-template>
                   
-                  <span class="star"><star-rating [value]="food.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="18px" [readonly]="true"></star-rating></span>
+                  <span class="star"><star-rating [value]="food.star" [totalstars]="5" checkedcolor="red" uncheckedcolor="black" size="18px" [readonly]="false"></star-rating></span>
                  
                   <span *ngFor="let origin of food.origins">
                     {{origin}}

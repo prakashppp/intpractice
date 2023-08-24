@@ -24,8 +24,8 @@ export class TransferService {
   
   
   logindata:data[]=[
-      {email:'prakash@gmail.com',password:'punam'},
-      {email:'punam@gmail.com',password:'prakash'},
+      {email:'prakash@gmail.com',password:'prakash'},
+      {email:'p@gmail.com',password:'prakash'},
       {email:'krishn@gmail.com',password:'radha'}
   ]
   
